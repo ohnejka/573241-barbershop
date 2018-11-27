@@ -30,6 +30,8 @@
         <li><a href="catalog.html">Магазин</a></li>
         <li class="breadcrumbs-current">Средства для ухода</li>
       </ul>
+
+      
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <section class="filters-producers">
@@ -65,29 +67,30 @@
                 <h3>Группы товаров:</h3>
                 <ul>
                     <li>
-                        <input type="checkbox" name="razorstuff" value="razorstuff" id="razorstuff">
+                        <input type="checkbox" name="product-group" value="razorstuff" id="razorstuff">
                         <label for="razorstuff">Бритвенные принадлежности</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="careproducts" value="careproducts" id="careproducts">
+                        <input type="checkbox" name="product-group" value="careproducts" id="careproducts">
                         <label for="careproducts">Средства для ухода</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="accessories" value="accessories" id="accessories">
+                        <input type="checkbox" name="product-group" value="accessories" id="accessories">
                         <label for="accessories">Аксессуары</label>
                     </li>
                 </ul>
-                <button>Показать</button>
+                <button type="button">Показать</button>
             </section>
-        <!-- Здесь будет форма -->
+        
       </section>
       
       <section class="catalog">
         <h2 class="visually-hidden">Список средств для ухода</h2>
         <ul class="catalog-list">
+
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">
+              <a href="barbershop-item.html">
                 <span class="catalog-category">Набор для путешествий</span>
                 <span class="catalog-item-title">«Baxter of California»</span>
               </a>
@@ -102,6 +105,8 @@
               <a class="button" href="#">Купить</a>
             </p>
           </li>
+
+
           <li class="catalog-item">
             <h3>
               <a href="catalog-item.html">
@@ -219,8 +224,27 @@
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+
+      <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
+                <p>
+                    <label class="visually-hidden" for="login">Логин</label>
+                    <input type="text" id="login" name="login" placeholder="Логин">
+                </p>
+
+                <p>
+                    <label class="visually-hidden" for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Пароль">
+                </p>
+                
+                <label>
+                    <input type="checkbox" checked name="remember-user" id="remember-user">
+                    Запомните меня</label>
+                
+                <a href="#">Я забыл пароль!</a>
+                <button type="submit">Войти</button>
+                <button type="button" class="close-modal">Закрыть окно</button>
+      </form>
+      
     </section>
   </body>
 </html>
